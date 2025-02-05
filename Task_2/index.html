@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><span>Portfolio.</span></h2>
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-talk">Let's Talk</a>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h2>Hi, I'm <span>Mrunal Daddi</span></h2>
+            <h4>Web Developer</h4>
+            <p></p>
+            <div class="btn-group">
+                <a href="#">See Projects</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="web.jpg" alt="Mrunal Daddi">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I am Mrunal Daddi. I am currently pursuing a Bachelor of Engineering in Computer Engineering. Passionate about web development and machine learning, I enjoy exploring innovative technologies and solving real-world problems through code. My journey includes hands-on projects, continuous learning, and a dedication to staying updated with the latest trends in the tech world. I thrive on building meaningful applications and gaining new insights into the ever-evolving field of technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="content">
+            <h2>My Portfolio</h2>
+            <div class="projects">
+                <div class="project">Youtube Transcript Summarizer</div>
+                <div class="project">Sentiment Analysis</div>
+                <div class="project">Coffee Ordering Website</div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p>Get in touch with me via email at mrunaldaddi@gmail.com or connect on social media.</p>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

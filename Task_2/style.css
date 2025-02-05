@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* Light text for readability */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    cursor: default;
+}
+
+.logo span {
+    color: #80e4c3; /* Mint Green */
+}
+
+.navigation {
+    margin-left: -300px;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    color: #ff6f61; /* Coral */
+}
+
+.btn-talk {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 35px;
+    background: #ff6f61; /* Coral */
+    border-radius: 10px;
+    border: 2px solid #ff6f61;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-talk:hover {
+    color: #ff6f61;
+    background: transparent;
+}
+
+section {
+    padding: 80px 100px;
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 30px 100px;
+    justify-content: space-between; /* Space between content and image */
+}
+
+.content {
+    max-width: 500px;
+    color: #fff;
+}
+
+.content h2 {
+    font-size: 3em;
+}
+
+.content h2 span {
+    color: #80e4c3; /* Mint Green */
+}
+
+.content h4 {
+    font-size: 2em;
+}
+
+.content p {
+    padding: 10px 0 40px 0;
+}
+
+.btn-group a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: #ff6f61; /* Coral */
+    border-radius: 10px;
+    border: 2px solid #ff6f61;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn-group a:hover:nth-child(1) {
+    color: #ff6f61;
+    background: transparent;
+}
+
+.btn-group a:nth-child(2) {
+    color: #ff6f61; /* Coral */
+    background: transparent;
+    margin-left: 30px;
+    padding: 10px 30px;
+}
+
+.btn-group a:hover:nth-child(2) {
+    color: #fff;
+    background: #ff6f61; /* Coral */
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 50px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #ff6f61; /* Coral */
+    border-radius: 50%;
+    margin-right: 22px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    outline: 2px solid #ff6f61; /* Coral */
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a i {
+    color: #fff;
+}
+
+/* About, Portfolio, and Contact Sections */
+.about, .portfolio, .contact {
+    background: #1a1a1a; /* Dark background for sections */
+    text-align: center;
+    padding: 80px 100px;
+}
+
+.about h2, .portfolio h2, .contact h2 {
+    color: #80e4c3; /* Mint Green */
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.project {
+    width: 30%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.project:hover {
+    background-color: #ff6f61; /* Coral */
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Project 1 Background */
+.projects .project:nth-child(1) {
+    background-image: url('youtube1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.projects .project:nth-child(2) {
+    background-image: url('SA1.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.projects .project:nth-child(3) {
+    background-image: url('coffee1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Image Styling */
+.image-container {
+    width: 40%; /* Adjust width of image container */
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;  /* Ensure image is responsive */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
